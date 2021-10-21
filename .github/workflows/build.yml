@@ -35,6 +35,7 @@ jobs:
     - name: Download package
       run: |
         cd lede
+        make defconfig
         make download -j8 || make download -j1 V=s
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
