@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: firmware
-        path: lede/bin/targets/
+        path: lede/bin
