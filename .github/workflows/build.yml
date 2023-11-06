@@ -14,7 +14,7 @@ jobs:
     - name: Clone source
       run: |
         git clone https://github.com/coolsnowwolf/lede
-        echo "src-git helloworld https://github.com/fw876/helloworld" >> lede/feeds.conf.default
+        echo "src-git helloworld https://github.com/fw876/helloworld;main" >> lede/feeds.conf.default
     - name: Setup feeds & Make config
       run: |
         cd lede
