@@ -16,6 +16,8 @@ jobs:
     - name: Clone source
       run: |
         git clone https://github.com/coolsnowwolf/lede
+    - name: Switch luci feed to 24.10
+      run: sed -i 's|openwrt-25.12|openwrt-24.10|' lede/feeds.conf.default
     - name: Setup feeds & Make config
       run: |
         cd lede
